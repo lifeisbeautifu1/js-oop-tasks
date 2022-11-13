@@ -42,6 +42,23 @@ describe('es6', () => {
 
             // TODO
             assert.strictEqual(!!dic, true);
+
+            // Корректно работает со string
+            dic.set(
+                'Spelling',
+                'The correct arrangements of letters for the word'
+            );
+
+            assert.strictEqual(
+                dic.get('Spelling'),
+                'The correct arrangements of letters for the word'
+            );
+
+            // Возвращает undefined на другие типы данных
+
+            assert.strictEqual(dic.set(1, 'uotutaoe'), undefined);
+
+            assert.strictEqual(dic.get(1), undefined);
         });
     });
 });

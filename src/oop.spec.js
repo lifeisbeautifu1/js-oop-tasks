@@ -57,21 +57,19 @@ describe('ООП', () => {
 
     describe('#Queue', () => {
         it('проверка массивом', () => {
-            const queue = new core.Queue();
-            // TODO:
-            assert.strictEqual(true, true);
+            const queue = new core.Queue([]);
+            assert.strictEqual(queue.pop(), undefined);
         });
 
         it('проверка на пограничные случаи', () => {
             const queue = new core.Queue();
-            // TODO:
-            assert.strictEqual(true, true);
+            queue.push(5);
+            assert.strictEqual(queue.pop(), 5);
         });
 
         it('может создаться из массива', () => {
             const queue = new core.Queue([1,2,3,5]);
-            // TODO:
-            assert.strictEqual(true, true);
+            assert.strictEqual(queue.pop(), 1);
         });
     });
 });
